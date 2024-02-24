@@ -1,0 +1,178 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.Common.AroundWalletFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_200"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/container_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:padding="32dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_around_pay"
+                    android:visibility="visible" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/container_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/you_are_having"
+                    android:textColor="@color/gray_900"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/total_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_900"
+                        android:textSize="24sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_around_coin_selected" />
+
+
+                </LinearLayout>
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/balance"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/message_no_around_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/message_no_around_pay"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selected_top_up_value"
+                        android:textColor="@color/gray_600"
+                        android:textSize="14sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    <vn.nip.around.Custom.CustomMoneyEditText
+                        android:id="@+id/custom_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/border_gray_400"
+                        android:hint="@string/enter_another_value"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:padding="12dp"
+                        android:textColor="@color/gray_900"
+                        android:textColorHint="@color/gray_300"
+                        android:textSize="14sp" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/error_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/invalid_top_up_value"
+                        android:textColor="@color/red_500"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <vn.nip.around.Custom.CustomButton
+                        android:id="@+id/confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/border_button_black"
+                        android:foreground="@android:color/transparent"
+                        android:text="@string/to_up_around_pay"
+                        android:textColor="@color/gray_900"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

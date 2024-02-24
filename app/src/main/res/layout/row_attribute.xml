@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_500"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:fontName="OpenSans_SemiBold" />
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:foreground="?selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_previous_attribute_disable" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/next_attribute"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:foreground="?selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_next_attribute_enable" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

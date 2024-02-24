@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <vn.nip.around.Custom.CustomTextView
+        android:id="@+id/item_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_name"
+        android:textColor="@color/gray_400"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_gray_400"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_500"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/is_gift"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_gift_selected" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/container_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_gray_400"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingBottom="4dp">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:textColor="@color/gray_400"
+            android:textSize="10sp" />
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_500"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="Fragment.Common.CallCenterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_full" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:overScrollMode="never"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"></android.support.v7.widget.RecyclerView>
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_200"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/text"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="@string/write_message"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_400"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/send"
+                            android:layout_width="44dp"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:background="@color/main"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_cs_send" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/call"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:padding="4dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cs_call" />
+
+                        <ImageButton
+                            android:id="@+id/capture"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:padding="4dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cs_camera" />
+
+                        <ImageButton
+                            android:id="@+id/gallery"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:padding="4dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cs_galerry" />
+
+                        <ImageButton
+                            android:id="@+id/emotion"
+                            android:layout_width="28dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:padding="4dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_cs_emotion_unselected" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_emoticion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

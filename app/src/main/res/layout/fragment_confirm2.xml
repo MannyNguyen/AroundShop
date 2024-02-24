@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="Fragment.Pickup.Confirm.ConfirmFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/delivery_time"
+                                android:textColor="@color/gray_900"
+                                android:textSize="12sp"
+                                app:fontName="OpenSans_SemiBold" />
+
+                            <LinearLayout
+                                android:id="@+id/calendar_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp"
+                                android:animateLayoutChanges="true"
+                                android:clickable="true"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/border_gray_600"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <vn.nip.around.Custom.CustomTextView
+                                        android:id="@+id/drop_date"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:clickable="false"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:padding="8dp"
+                                        android:textColor="@color/gray_600"
+                                        android:textColorHint="@color/gray_400"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right"
+                                        android:adjustViewBounds="true"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ic_gift_clock" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/child_fragment_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></FrameLayout>
+
+                        <!--<fragment-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--tools:layout="@layout/fragment_codconfirm" />-->
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@color/gray_300"></FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="12dp"
+                                android:orientation="vertical">
+
+                                <vn.nip.around.Custom.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/payment_methods"
+                                    android:textColor="@color/gray_900"
+                                    android:textSize="12sp"
+                                    app:fontName="OpenSans_SemiBold" />
+
+                                <fragment
+                                    android:id="@+id/list_payment_fragment"
+                                    android:name="vn.nip.around.Fragment.Common.ListPaymentFragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    tools:layout="@layout/fragment_list_payment" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+                <vn.nip.around.Custom.CustomButton
+                    android:id="@+id/confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main"
+                    android:text="@string/match_shipper"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomFontTextView">
+        <attr name="fontName" />
+    </declare-styleable>
+
+    <attr name="fontName" format="enum">
+        <enum name="OpenSans_Bold" value="4" />
+        <enum name="OpenSans_SemiBold" value="3" />
+        <enum name="OpenSans_Italic" value="5" />
+        <enum name="OpenSans_Light" value="1" />
+        <enum name="OpenSans_Regular" value="2" />
+    </attr>
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="maxHeight" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="Fragment.Pickup.PopupPurchaseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@string/purchase_something"
+                    android:textColor="@color/gray_600"
+                    android:textSize="11sp"
+                    app:fontName="OpenSans_Light" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_important" />
+            </LinearLayout>
+
+            <vn.nip.around.Custom.CustomEditText
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom_gray_300"
+                android:hint="@string/hint_your_item"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="0dp"
+                android:textColor="@color/gray_900"
+                android:textColorHint="@color/gray_300"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@string/pay_on_behalf_purchase"
+                        android:textColor="@color/gray_600"
+                        android:textSize="11sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_important" />
+                </LinearLayout>
+
+                <vn.nip.around.Custom.CustomMoneyEditText
+                    android:id="@+id/item_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom_gray_300"
+                    android:hint="VND"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/gray_900"
+                    android:textColorHint="@color/gray_300"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/error_message"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/popup_error_edittext"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/min_money"
+                android:textColor="@color/red_500"
+                android:textSize="9sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@string/note"
+                    android:textColor="@color/gray_600"
+                    android:textSize="11sp"
+                    app:fontName="OpenSans_Light" />
+
+            </LinearLayout>
+
+            <vn.nip.around.Custom.CustomEditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom_gray_300"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="0dp"
+                android:textColor="@color/gray_900"
+                android:textColorHint="@color/gray_300"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/message_delivery_info_pickup"
+            android:textColor="@color/main"
+            android:textSize="11sp"
+            app:fontName="OpenSans_Italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <vn.nip.around.Custom.CustomButton
+                android:id="@+id/close"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_black"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
+            <vn.nip.around.Custom.CustomButton
+                android:id="@+id/confirm"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@color/main"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

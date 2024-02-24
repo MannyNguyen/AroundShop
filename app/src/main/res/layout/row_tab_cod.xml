@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <vn.nip.around.Custom.CustomTextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/pickup_address"
+        android:textColor="@color/gray_900"
+        android:textSize="11sp"
+        app:fontName="OpenSans_SemiBold" />
+
+    <FrameLayout
+        android:id="@+id/line"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/gray_400" />
+
+
+</LinearLayout>

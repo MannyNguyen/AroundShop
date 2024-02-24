@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="Fragment.SendGift.SendGiftAroundPayFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/send_gift_from_around_pay"
+                    android:textColor="@color/gray_900"
+                    android:textSize="13sp"
+                    app:fontName="OpenSans_SemiBold" />
+
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/avatar_default" />
+
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textColor="@color/gray_900"
+                    android:textSize="14sp"
+                    app:fontName="OpenSans_SemiBold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true"
+                    android:padding="16dp">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_the_amount"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <vn.nip.around.Custom.CustomMoneyEditText
+                        android:id="@+id/money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/border_edit_text_gray"
+                        android:hint="VND"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/message_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/min_max_send_gift_around"
+                        android:textColor="@color/red_500"
+                        android:textSize="11sp"
+                        android:visibility="gone" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/your_message"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/border_edit_text_gray"
+                        android:gravity="left|top"
+                        android:hint="@string/add_a_message"
+                        android:maxLength="200"
+                        android:minHeight="80dp"
+                        android:padding="8dp"
+                        android:textColor="@color/gray_900"
+                        android:textColorHint="@color/gray_400"
+                        android:textSize="12sp" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/max_200"
+                        android:textColor="@color/gray_600"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <vn.nip.around.Custom.CustomButton
+                    android:id="@+id/confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/main_yellow"
+                    android:text="@string/send_gift"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:fontName="OpenSans_SemiBold" />
+            </LinearLayout>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_image_1">image_vn</string>
+    <string name="key_title_1">title_vn</string>
+    <string name="key_ask_1">ask_now_vn</string>
+    <string name="key_send_gift_1">send_gift_vn</string>
+    <string name="key_image">vn_image</string>
+    <string name="key_service_name">vn_service_name</string>
+    <string name="key_name">vn_name</string>
+    <string name="key_shop_name">shop_vn_name</string>
+</resources>

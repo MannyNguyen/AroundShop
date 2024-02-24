@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MUA HO"
+                    android:textAllCaps="true"
+                    android:textColor="@color/main_orange"
+                    android:textSize="14sp"
+                    app:fontName="OpenSans_SemiBold" />
+            </LinearLayout>
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:30 PM Thứ 2, 22/89/2017"
+                android:textColor="@color/gray_400"
+                android:textSize="10sp"
+                app:fontName="OpenSans_Italic" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Chocolate Chocolate Chocolate Chocolate Chocolate "
+                android:textColor="@color/blue_500"
+                android:textSize="12sp"
+                app:fontName="OpenSans_SemiBold" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="1234 Huynh tan phat, Quan 7, thanh pho Ho Chi Minh Viet Nam"
+                android:textColor="@color/gray_600"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <vn.nip.around.Custom.CustomButton
+                android:id="@+id/reorder"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@color/main"
+                android:foreground="?selectableItemBackground"
+                android:text="@string/re_order"
+                app:fontName="OpenSans_SemiBold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/gray_300"></FrameLayout>
+</FrameLayout>

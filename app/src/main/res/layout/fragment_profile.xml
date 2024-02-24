@@ -1,0 +1,331 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    tools:context=".Fragment.Profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/gradient_main">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:fontName="OpenSans_Light" />
+
+                <include layout="@layout/back" />
+
+                <vn.nip.around.Custom.CustomButton
+                    android:id="@+id/save"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@android:color/transparent"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    app:fontName="OpenSans_Light" />
+
+
+            </FrameLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/cover_profile_1" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-53dp">
+
+                        <View
+                            android:layout_width="106dp"
+                            android:layout_height="106dp"
+                            android:alpha="0.3"
+                            android:background="@drawable/circle_gray" />
+
+                        <ImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/avatar_default" />
+
+                        <ImageView
+                            android:id="@+id/level"
+                            android:layout_width="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_member"
+                            android:scaleType="centerInside" />
+
+                    </FrameLayout>
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/gray_900"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/edt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_edt_black"
+                            android:gravity="center"
+                            android:inputType="textCapWords"
+                            android:padding="12dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_600"
+                            android:textSize="13sp" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_edt_black"
+                            android:gravity="center"
+                            android:inputType="phone"
+                            android:padding="12dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_600"
+                            android:textSize="13sp" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/birthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_edt_black"
+                            android:gravity="center"
+                            android:hint="@string/your_birthday"
+                            android:inputType="phone"
+                            android:padding="12dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_600"
+                            android:textSize="13sp" />
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_edt_black"
+                            android:gravity="center"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:padding="12dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_600"
+                            android:textSize="13sp" />
+
+                        <Spinner
+                            android:id="@+id/language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_edt_black"
+                            android:spinnerMode="dropdown" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+
+                            <LinearLayout
+                                android:id="@+id/home"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_home"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:clickable="false"
+                                    android:src="@drawable/ic_home_selected" />
+
+                                <vn.nip.around.Custom.CustomTextView
+                                    android:id="@+id/txt_home"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:text="@string/home"
+                                    android:textColor="@color/main"
+                                    android:textSize="12sp"
+                                    app:fontName="OpenSans_SemiBold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="4dp"
+                                android:background="@color/gray_400" />
+
+                            <LinearLayout
+                                android:id="@+id/work"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_work"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:clickable="false"
+                                    android:src="@drawable/ic_work_unselected" />
+
+                                <vn.nip.around.Custom.CustomTextView
+                                    android:id="@+id/txt_work"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:text="@string/work"
+                                    android:textColor="@color/gray_900"
+                                    android:textSize="12sp"
+                                    app:fontName="OpenSans_SemiBold" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="4dp"
+                                android:background="@color/gray_400" />
+
+                            <LinearLayout
+                                android:id="@+id/other"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_other"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:clickable="false"
+                                    android:src="@drawable/ic_place_unselected" />
+
+                                <vn.nip.around.Custom.CustomTextView
+                                    android:id="@+id/txt_other"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:text="@string/other"
+                                    android:textColor="@color/gray_900"
+                                    android:textSize="12sp"
+                                    app:fontName="OpenSans_SemiBold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_edt_black"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="12dp">
+
+                            <ImageView
+                                android:id="@+id/img_address"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_home_selected" />
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:id="@+id/address_profile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/gray_900"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

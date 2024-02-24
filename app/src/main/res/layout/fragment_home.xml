@@ -1,0 +1,408 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    android:id="@+id/home_fragment"
+    tools:context="Fragment.Common.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/frame_pan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:visibility="gone">
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/main"
+            android:orientation="horizontal">
+
+            <include layout="@layout/menu" />
+
+            <include layout="@layout/search_box" />
+
+            <include layout="@layout/cart" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/white">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center|bottom"
+                        app:tabBackground="@drawable/tab_selector_dot"
+                        app:tabGravity="center"
+                        app:tabIndicatorColor="@android:color/transparent"
+                        app:tabMaxWidth="8dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/gift_me_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/login_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="6dp"
+                        android:visibility="gone">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/sign_in_experience"
+                            android:textColor="@color/gray_900"
+                            android:textSize="10sp" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_button_black"
+                            app:fontName="OpenSans_SemiBold"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/login_register"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray_900"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/around_fee_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/you_are_having"
+                            android:textColor="@color/gray_900"
+                            android:textSize="10sp" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:id="@+id/around_fee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1000.000.000"
+                                android:textColor="@color/gray_900"
+                                android:textSize="16sp"
+                                app:fontName="OpenSans_SemiBold" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/around_fee"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_around_coin_selected" />
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/around_fee"
+                                android:layout_gravity="center"
+                                android:text="@string/balance"
+                                android:textColor="@color/gray_400"
+                                android:textSize="10sp" />
+
+                        </RelativeLayout>
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/top_up_1"
+                            android:layout_width="80dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_button_black"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/top_up"
+                            app:fontName="OpenSans_SemiBold"
+                            android:textColor="@color/gray_900"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/around_no_fee_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/message_no_around_pay"
+                            android:textColor="@color/gray_900"
+                            android:textSize="11sp" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/top_up_2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_button_black"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/top_up"
+                            app:fontName="OpenSans_SemiBold"
+                            android:textColor="@color/gray_900"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"></FrameLayout>
+
+                            <ImageView
+                                android:id="@+id/title_group_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="24dp"
+                                android:layout_gravity="left"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY" />
+                        </FrameLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/group_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:overScrollMode="never"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_gravity="bottom"
+                                android:background="@color/white"></FrameLayout>
+
+                            <ImageView
+                                android:id="@+id/title_group_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="24dp"
+                                android:layout_gravity="left"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitXY" />
+                        </FrameLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/group_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:overScrollMode="never"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"></android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/bottom_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/bg_main_map"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/follow_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/border_button_black"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:fontName="OpenSans_SemiBold"
+                            android:text="@string/processing_order"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray_900"
+                            android:textSize="13sp" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/number_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            app:fontName="OpenSans_SemiBold"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gray_900"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pager_bottom_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/pager_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/main_yellow"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ask"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:scaleType="centerInside" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/send_gift"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"></android.support.v7.widget.RecyclerView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/progress" />
+
+</FrameLayout>

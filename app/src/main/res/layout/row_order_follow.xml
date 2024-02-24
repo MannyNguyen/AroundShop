@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vn.nip.around.Custom.CustomCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/line"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/main"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_history_pickup" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:22"
+                android:textColor="@color/gray_600"
+                android:textSize="14sp"
+                app:fontName="OpenSans_SemiBold" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/ampm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                app:fontName="OpenSans_Light" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/gray_400"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Van chuyen - thu ho - mua ho"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                app:fontName="OpenSans_SemiBold" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="FRI, JUN 6, 2017"
+                android:textColor="@color/gray_600"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/order_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="FJDFHKDS"
+                    android:textColor="@color/main"
+                    android:textSize="10sp"
+                    app:fontName="OpenSans_SemiBold" />
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="2.500.500 d"
+                    android:textColor="@color/gray_400"
+                    android:textSize="14sp"
+                    app:fontName="OpenSans_SemiBold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button_border_gray"
+                        android:gravity="center"
+                        android:minWidth="80dp"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/finished"
+                        android:textColor="@color/gray_600"
+                        android:textSize="11sp" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</vn.nip.around.Custom.CustomCardView>

@@ -1,0 +1,89 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    tools:context="vn.nip.around.Fragment.Gift.TabGiftingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <include layout="@layout/toolbar_full" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                app:tabIndicatorColor="@color/main"
+                app:tabMode="scrollable"></android.support.design.widget.TabLayout>
+
+            <vn.nip.around.Custom.CustomCardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/sort"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="14dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_sort" />
+
+                    <ImageButton
+                        android:id="@+id/layout_list"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="14dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_list" />
+                </LinearLayout>
+            </vn.nip.around.Custom.CustomCardView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/progress" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

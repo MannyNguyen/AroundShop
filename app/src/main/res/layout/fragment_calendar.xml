@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragment.Common.CalendarFragment">
+
+    <LinearLayout
+        android:id="@+id/delivery_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/is_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/e_delivery_off"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/gradient_gray">
+
+            <include layout="@layout/custome_calendar_clock" />
+
+            <FrameLayout
+                android:id="@+id/enable_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@color/white"
+                android:clickable="true"
+                android:visibility="visible"></FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

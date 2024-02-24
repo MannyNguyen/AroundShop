@@ -1,0 +1,204 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context="Fragment.Common.LoginFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_login" />
+
+        <vn.nip.around.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/be_right"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_900"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <vn.nip.around.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_900"
+                android:textSize="11sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@color/white" />
+
+                <vn.nip.around.Custom.CustomEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_your_name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/gray_900"
+                    android:textColorHint="@color/gray_600"
+                    android:textSize="12sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <vn.nip.around.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_900"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.5"
+                        android:background="@color/white" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="44dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="+84"
+                        android:textSize="12sp"></vn.nip.around.Custom.CustomTextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.5"
+                        android:background="@color/white" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:padding="12dp"
+                        android:textColor="@color/gray_900"
+                        android:textColorHint="@color/gray_600"
+                        android:textSize="12sp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <vn.nip.around.Custom.CustomButton
+            android:id="@+id/confirm"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border_button_black"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/login"
+            android:textColor="@color/gray_900"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help_black" />
+
+            <vn.nip.around.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="@string/support"
+                android:textAllCaps="true"
+                android:textColor="@color/gray_900"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <vn.nip.around.Custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="12dp"
+            android:text="@string/version"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_900"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+
+    <include layout="@layout/progress" />
+</FrameLayout>

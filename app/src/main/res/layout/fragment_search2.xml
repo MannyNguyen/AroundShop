@@ -1,0 +1,233 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="Fragment.SearchTag.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/main"
+                android:orientation="horizontal">
+
+                <include layout="@layout/menu" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search_home"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_search_home" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/search_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_search_home"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_600"
+                        android:textColorHint="@color/gray_400"
+                        android:textSize="12sp">
+
+                    </vn.nip.around.Custom.CustomEditText>
+                </LinearLayout>
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/tab_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@string/product"
+                    android:textColor="@color/gray_900"
+                    android:textSize="12sp" />
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/tab_shop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@string/shop"
+                    android:textColor="@color/gray_900"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/line_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/main"></FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:padding="8dp"
+                        android:text="@string/trend_search"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_trend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:id="@+id/search_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:orientation="horizontal">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="@string/history_search"
+                            android:textColor="@color/gray_900"
+                            android:textSize="12sp"
+                            app:fontName="OpenSans_SemiBold" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/clear_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/clear_history"
+                            android:textColor="@color/main_blue"
+                            android:textSize="10sp"
+                            app:fontName="OpenSans_SemiBold" />
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/suppliers_in_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_200"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@string/suppliers_in_this_category"
+                    android:textColor="@color/gray_900"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_autocomplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:clickable="true"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

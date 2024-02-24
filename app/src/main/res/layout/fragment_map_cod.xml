@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="vn.nip.around.Fragment.Pickup.MapCODFragment">
+
+    <FrameLayout
+        android:id="@+id/fragment_map_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true">
+
+            <vn.nip.around.Custom.CustomCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="16dp"
+                app:contentPadding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <vn.nip.around.Custom.CustomRecycler
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/row_book_center"></vn.nip.around.Custom.CustomRecycler>
+
+                    <vn.nip.around.Custom.CustomButton
+                        android:id="@+id/add_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/border_button_black"
+                        android:text="@string/add_location"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+                </LinearLayout>
+
+            </vn.nip.around.Custom.CustomCardView>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/my_location"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:foreground="?selectableItemBackground"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/locator" />
+
+        <vn.nip.around.Custom.CustomButton
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/main"
+            android:foreground="?selectableItemBackground"
+            android:text="@string/create_order"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+</FrameLayout>

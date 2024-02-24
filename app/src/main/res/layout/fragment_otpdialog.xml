@@ -1,0 +1,91 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="vn.nip.around.Fragment.Dialog.OTPDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="@color/white">
+
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/remind_otp"
+            android:textSize="14sp" />
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/main"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            app:fontName="OpenSans_SemiBold" />
+
+        <vn.nip.around.Custom.CustomEditText
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_phone"
+            android:hint="@string/input_otp"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColor="@color/gray_600"
+            android:gravity="center"
+            android:textColorHint="@color/gray_400"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <vn.nip.around.Custom.CustomButton
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_button_black"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_900">
+
+            </vn.nip.around.Custom.CustomButton>
+
+            <vn.nip.around.Custom.CustomButton
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@color/main"
+                android:text="@string/ok"
+                android:textAllCaps="false"
+                android:textColor="@color/white">
+
+            </vn.nip.around.Custom.CustomButton>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

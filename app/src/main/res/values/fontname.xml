@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="OpenSans_Bold" translatable="false">OpenSans-Bold</string>
+    <string name="OpenSans_Semibold" translatable="false">OpenSans-Semibold</string>
+    <string name="OpenSans_Light" translatable="false">OpenSans-Light</string>
+    <string name="OpenSans_Regular" translatable="false">OpenSans-Regular</string>
+    <string name="OpenSans_Italic" translatable="false">OpenSans-Italic</string>
+</resources>

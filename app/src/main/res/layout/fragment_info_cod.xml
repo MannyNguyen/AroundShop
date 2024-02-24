@@ -1,0 +1,543 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragment.Pickup.InfoCODFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white"
+        android:padding="12dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <vn.nip.around.Custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="12dp"
+                android:text="@string/delivery_info"
+                android:textAllCaps="true"
+                android:textColor="@color/main"
+                android:textSize="15sp" />
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_pickup_location" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/position"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="20"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+                    </FrameLayout>
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="20"
+                        android:textColor="@color/gray_900"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/popup_cod_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <vn.nip.around.Custom.CustomTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="text"
+                                        android:text="@string/contact_name"
+                                        android:textColor="@color/gray_600"
+                                        android:textSize="11sp"
+                                        app:fontName="OpenSans_Light" />
+                                </LinearLayout>
+
+                                <vn.nip.around.Custom.CustomEditText
+                                    android:id="@+id/name_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_bottom_gray_300"
+                                    android:hint="Thanh bui"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:paddingBottom="4dp"
+                                    android:paddingLeft="0dp"
+                                    android:textColor="@color/gray_900"
+                                    android:textColorHint="@color/gray_300"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:orientation="horizontal">
+
+                                    <vn.nip.around.Custom.CustomTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="text"
+                                        android:text="@string/contact_phone"
+                                        android:textColor="@color/gray_600"
+                                        android:textSize="11sp"
+                                        app:fontName="OpenSans_Light" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_bottom_gray_300"
+                                    android:orientation="horizontal">
+
+                                    <vn.nip.around.Custom.CustomEditText
+                                        android:id="@+id/phone_first"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@android:color/transparent"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:paddingBottom="4dp"
+                                        android:paddingLeft="0dp"
+                                        android:textColor="@color/gray_900"
+                                        android:textColorHint="@color/gray_300"
+                                        android:textSize="12sp" />
+
+                                    <ImageView
+                                        android:id="@+id/contact_first"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="right"
+                                        android:layout_marginBottom="4dp"
+                                        android:adjustViewBounds="true"
+                                        android:foreground="?selectableItemBackground"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ic_contact" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:orientation="horizontal">
+
+                                    <vn.nip.around.Custom.CustomTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="text"
+                                        android:text="@string/note"
+                                        android:textColor="@color/gray_600"
+                                        android:textSize="11sp"
+                                        app:fontName="OpenSans_Light" />
+
+                                </LinearLayout>
+
+                                <vn.nip.around.Custom.CustomEditText
+                                    android:id="@+id/note_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_bottom_gray_300"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:paddingBottom="4dp"
+                                    android:paddingLeft="0dp"
+                                    android:textColor="@color/gray_900"
+                                    android:textColorHint="@color/gray_300"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/popup_cod_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@string/your_item_cod"
+                                android:textColor="@color/gray_600"
+                                android:textSize="11sp"
+                                app:fontName="OpenSans_Light" />
+
+                            <ImageView
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_important" />
+                        </LinearLayout>
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/item_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_300"
+                            android:hint="@string/hint_your_item"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:orientation="horizontal">
+
+                                <vn.nip.around.Custom.CustomTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:text="@string/pay_on_behalf_cod"
+                                    android:textColor="@color/gray_600"
+                                    android:textSize="11sp"
+                                    app:fontName="OpenSans_Light" />
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="8dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="8dp"
+                                    android:src="@drawable/ic_important" />
+                            </LinearLayout>
+
+                            <vn.nip.around.Custom.CustomMoneyEditText
+                                android:id="@+id/item_cost"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_bottom_gray_300"
+                                android:hint="VND"
+                                android:inputType="number"
+                                android:maxLength="11"
+                                android:maxLines="1"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="0dp"
+                                android:textColor="@color/gray_900"
+                                android:textColorHint="@color/gray_300"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/error_message"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/popup_error_edittext"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/min_money"
+                            android:textColor="@color/red_500"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@string/contact_name"
+                                android:textColor="@color/gray_600"
+                                android:textSize="11sp"
+                                app:fontName="OpenSans_Light" />
+                        </LinearLayout>
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_300"
+                            android:hint="Thanh Bui"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_300"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@string/contact_phone"
+                                android:textColor="@color/gray_600"
+                                android:textSize="11sp"
+                                app:fontName="OpenSans_Light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_300"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomEditText
+                                android:id="@+id/phone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="0dp"
+                                android:textColor="@color/gray_900"
+                                android:textColorHint="@color/gray_300"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/contact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="right"
+                                android:layout_marginBottom="4dp"
+                                android:adjustViewBounds="true"
+                                android:foreground="?selectableItemBackground"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_contact" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:text="@string/note"
+                                android:textColor="@color/gray_600"
+                                android:textSize="11sp"
+                                app:fontName="OpenSans_Light" />
+
+                        </LinearLayout>
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_300"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_900"
+                            android:textColorHint="@color/gray_300"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="@string/message_delivery_info_pickup"
+                        android:textColor="@color/main"
+                        android:textSize="11sp"
+                        app:fontName="OpenSans_Italic" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <vn.nip.around.Custom.CustomButton
+                    android:id="@+id/close"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_button_black"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textSize="12sp" />
+
+                <vn.nip.around.Custom.CustomButton
+                    android:id="@+id/confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/main"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

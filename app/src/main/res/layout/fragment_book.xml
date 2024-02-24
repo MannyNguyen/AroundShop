@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="vn.nip.around.Fragment.Pickup.BookFragment">
+
+
+    <FrameLayout
+        android:id="@+id/container_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_map"></FrameLayout>
+
+
+    <ImageButton
+        android:id="@+id/my_location"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="112dp"
+        android:layout_marginLeft="8dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:foreground="?selectableItemBackground"
+        android:padding="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/locator"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/next"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="112dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ic_next_off"
+        android:visibility="gone">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:fontName="OpenSans_SemiBold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <LinearLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/gradient_main"
+                android:orientation="horizontal"
+                app:popupTheme="@style/Base.ThemeOverlay.AppCompat.Light">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <ImageButton
+                        android:id="@+id/menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="18dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_menu" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/circle_red">
+
+                        <TextView
+                            android:id="@+id/number_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:minWidth="16dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_logo_app_bar" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:visibility="invisible">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="16dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_cart" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/circle_red">
+
+                        <TextView
+                            android:id="@+id/number_cart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:minWidth="16dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+
+            <!--<fragment-->
+            <!--android:id="@+id/map"-->
+            <!--class="com.google.android.gms.maps.SupportMapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:animateLayoutChanges="true"-->
+            <!--android:tag="map"-->
+            <!--tools:context="Fragment.Shipping.BookFragment" />-->
+
+            <ImageButton
+                android:id="@+id/fee_shipping"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:foreground="?selectableItemBackground"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_fee_shipping"
+                android:visibility="gone" />
+
+            <ScrollView
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/bar_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"></LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

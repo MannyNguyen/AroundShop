@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    tools:context=".Fragment.Search_old.ChildSearchFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/default_cotainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <vn.nip.around.Custom.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_200"
+                android:padding="8dp"
+                android:text="@string/trend_search"
+                android:textColor="@color/gray_900"
+                android:textSize="12sp"
+                app:fontName="OpenSans_SemiBold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_trend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/search_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_200"
+                android:orientation="horizontal">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/history_search"
+                    android:textColor="@color/gray_900"
+                    android:textSize="12sp"
+                    app:fontName="OpenSans_SemiBold" />
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/clear_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/clear_history"
+                    android:textColor="@color/main_blue"
+                    android:textSize="10sp"
+                    app:fontName="OpenSans_SemiBold" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <include layout="@layout/progress" />
+</FrameLayout>

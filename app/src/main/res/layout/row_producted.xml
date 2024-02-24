@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <vn.nip.around.Custom.CustomButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/red_500"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:alwaysDrawnWithCache="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerInside" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Soda 12345Soda 12345Soda 12345Soda 12345Soda 12345Soda 12345"
+                    android:textAllCaps="true"
+                    android:textColor="@color/main"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/shop_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Yellow no."
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:maxLines="1"
+                        android:text="4.000.000"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/is_gift_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/is_gift"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_gift_unselected" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/text_is_gift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/gift_box"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"></FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_gray_400"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/remove"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_remove_product" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:minWidth="32dp"
+                            android:text="100"
+                            android:textColor="@color/gray_900"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/add"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_add_product" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="@color/gray_400"></FrameLayout>
+    </FrameLayout>
+
+</com.daimajia.swipe.SwipeLayout>
+

@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    tools:context="Fragment.SearchTag.DetailSearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/main"
+                android:orientation="horizontal">
+
+                <include layout="@layout/back" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search_home"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:foreground="?selectableItemBackground"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_search_home" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/search_content_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_search_home"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_600"
+                        android:textColorHint="@color/gray_400"
+                        android:textSize="12sp">
+
+                    </vn.nip.around.Custom.CustomEditText>
+
+                    <LinearLayout
+                        android:id="@+id/hash_tag_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_search_tag"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:visibility="gone">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/hash_tag_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp">
+
+                        </vn.nip.around.Custom.CustomTextView>
+
+                        <ImageView
+                            android:id="@+id/hash_tag_remove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:background="@android:color/transparent"
+                            android:foreground="?selectableItemBackground"
+                            android:scaleType="centerInside"
+
+                            android:src="@drawable/ic_remove_image_supplier" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:id="@+id/detail_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/detail_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:padding="8dp"
+                        android:text="@string/trend_search"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_SemiBold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/detail_recycler_trend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:id="@+id/search_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_200"
+                        android:orientation="horizontal">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="@string/history_search"
+                            android:textColor="@color/gray_900"
+                            android:textSize="12sp"
+                            app:fontName="OpenSans_SemiBold" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:id="@+id/clear_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/clear_history"
+                            android:textColor="@color/main_blue"
+                            android:textSize="10sp"
+                            app:fontName="OpenSans_SemiBold" />
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/detail_recycler_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <vn.nip.around.Custom.CustomTextView
+                android:id="@+id/message_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="12dp"
+                android:text="@string/no_result_search_live"
+                android:visibility="gone" />
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

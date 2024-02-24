@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Fragment.Common.SignToShipFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/main">
+
+                <vn.nip.around.Custom.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:fontName="OpenSans_Light" />
+
+                <ImageButton
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:padding="14dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_close_white_24dp" />
+            </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:text="@string/message_to_shipper"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="132dp"
+                            android:layout_height="132dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/avatar_default" />
+
+
+                        <ImageButton
+                            android:id="@+id/pick_avatar"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="right|bottom"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/edit_profile" />
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="64dp"
+                        android:paddingRight="64dp"
+                        android:paddingTop="8dp">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text="@string/full_name"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/fullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_400"
+                            android:inputType="text"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_500"
+                            android:textSize="16sp"
+                            app:fontName="OpenSans_Light" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:inputType="text"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_400"
+                            android:inputType="text"
+
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_500"
+                            android:textSize="16sp"
+                            app:fontName="OpenSans_Light" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:inputType="text"
+                            android:text="@string/id_no"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/id_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_400"
+                            android:inputType="text"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_500"
+                            android:textSize="16sp"
+                            app:fontName="OpenSans_Light" />
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:inputType="text"
+                            android:text="@string/address"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
+
+                        <vn.nip.around.Custom.CustomEditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom_gray_400"
+                            android:inputType="text"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/gray_500"
+                            android:textSize="16sp"
+                            app:fontName="OpenSans_Light" />
+
+                        <FrameLayout
+                            android:id="@+id/confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/button_main"
+                            android:foreground="?android:selectableItemBackground">
+
+                            <vn.nip.around.Custom.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="12dp"
+                                android:text="@string/confirm"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                app:fontName="OpenSans_Light" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

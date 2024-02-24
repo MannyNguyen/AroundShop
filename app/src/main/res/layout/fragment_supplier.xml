@@ -1,0 +1,317 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="vn.nip.around.Fragment.Common.SupplierFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_close" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/message_supplier"
+                        android:textColor="@color/main"
+                        android:textSize="12sp" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/full_name"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/store_name"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/store_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/store_address"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/store_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/email"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/website"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/facebook"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/product_of_cooperation"
+                        android:textColor="@color/gray_600"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <vn.nip.around.Custom.CustomEditText
+                        android:id="@+id/product_cooperation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/border_bottom_gray_400"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/gray_600"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <vn.nip.around.Custom.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:text="@string/forms_of_cooperation"
+                            android:textColor="@color/gray_900"
+                            android:textSize="12sp"
+                            app:fontName="OpenSans_Light" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <vn.nip.around.Custom.CustomRadioButton
+                                android:id="@+id/pickup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/checkbox"
+                                android:checked="true"
+                                android:paddingLeft="4dp"
+                                android:text="@string/pickup_delivery"
+                                android:textAllCaps="false"
+                                android:textColor="@color/gray_600"
+                                android:textSize="12sp" />
+
+                            <vn.nip.around.Custom.CustomRadioButton
+                                android:id="@+id/product_distributtion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:button="@drawable/checkbox"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="4dp"
+                                android:text="@string/product_distribution"
+                                android:textAllCaps="false"
+                                android:textColor="@color/gray_600"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <vn.nip.around.Custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:text="@string/product_images"
+                        android:textColor="@color/gray_900"
+                        android:textSize="12sp"
+                        app:fontName="OpenSans_Light" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"></android.support.v7.widget.RecyclerView>
+
+                    <vn.nip.around.Custom.CustomButton
+                        android:id="@+id/confirm"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_main"
+                        android:text="@string/register"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:fontName="OpenSans_Light" />
+                </LinearLayout>
+            </ScrollView>
+
+            <include layout="@layout/progress" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

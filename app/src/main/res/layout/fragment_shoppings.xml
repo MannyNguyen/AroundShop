@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/transparent"
+    tools:context="vn.nip.around.Fragment.Shopping.ShoppingsFragment">
+
+    <FrameLayout
+        android:id="@+id/outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/black"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"></android.support.v7.widget.RecyclerView>
+
+        <vn.nip.around.Custom.CustomButton
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:background="@drawable/border_button_black"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_900"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

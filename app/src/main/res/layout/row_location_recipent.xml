@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <vn.nip.around.Custom.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item name"
+        android:textColor="@color/gray_400"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_gray_400"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_600"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/is_gift"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_gift_selected" />
+    </LinearLayout>
+
+    <vn.nip.around.Custom.CustomTextView
+        android:id="@+id/recipent_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_name"
+        android:textColor="@color/gray_400"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_gray_400"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
+
+        <vn.nip.around.Custom.CustomTextView
+            android:id="@+id/recipent_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_500"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_call_now" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
